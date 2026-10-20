@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Production build output
+dist/
+client/dist/
+
+# Embedded PostgreSQL local runtime database & logs
+database/data_pglite/
+*.pglite/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# VS Code user settings (keep tasks & launch configs)
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json

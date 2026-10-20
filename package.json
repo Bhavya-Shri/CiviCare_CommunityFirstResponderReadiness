@@ -1,0 +1,15 @@
+{
+  "name": "civicare",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CiviCare - Community First Responder Readiness & Coordination System",
+  "scripts": {
+    "server": "npm run start --prefix server",
+    "server:dev": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test:constraints": "npm run test --prefix server",
+    "build": "npm run build --prefix client"
+  },
+  "keywords": ["civicare", "dbms", "first-responder", "coverage-aware-allocation", "chennai"]
+}

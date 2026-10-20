@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend Server (Node.js)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/server",
+      "program": "${workspaceFolder}/server/src/index.js",
+      "restart": true,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full Stack (Backend + Start Client Task)",
+      "configurations": ["Backend Server (Node.js)"],
+      "preLaunchTask": "Start Frontend Client"
+    }
+  ]
+}

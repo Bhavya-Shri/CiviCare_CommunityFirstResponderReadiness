@@ -17,7 +17,10 @@ export async function getDb() {
 
   if (dbUrl) {
     console.log('[Database] Connecting to native PostgreSQL via DATABASE_URL...');
-    const pool = new pg.Pool({ connectionString: dbUrl });
+    const pool = new pg.Pool({
+      connectionString: dbUrl,
+      ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : undefined
+    });
     dbClient = {
       query: async (sql, params = []) => {
         const start = Date.now();
